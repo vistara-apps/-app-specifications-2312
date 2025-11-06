@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUpDown, Zap, Shield, AlertTriangle, CheckCircle, Loader2 } from 'lucide-react';
 import RouteCard from './RouteCard';
-import { usePaymentContext } from '../hooks/usePaymentContext';
+import { usePaymentContext } from '../hooks/usePaymentContext.jsx';
 
 const SwapInterface = ({ onSwapComplete }) => {
   const [fromToken, setFromToken] = useState('SOL');
@@ -258,7 +258,7 @@ const SwapInterface = ({ onSwapComplete }) => {
               )}
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className={`font-medium ${simulationResult.success ? 'text-accent' : 'text-danger'}`}>
+                  <span className={`font-medium ${simulationResult.success ? 'text-accent' : 'text-danger'}`}> 
                     {simulationResult.probability}% Success Probability
                   </span>
                 </div>

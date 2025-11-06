@@ -24,11 +24,11 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-bg text-text">
+    <div className="min-h-screen bg-pixelBg text-pixelText">
       <Header />
       
       {/* Navigation Tabs */}
-      <div className="sticky top-0 z-40 bg-bg/80 backdrop-blur-sm border-b border-border">
+      <div className="sticky top-0 z-40 bg-pixelBg/80 backdrop-blur-sm border-b border-border">
         <div className="max-w-2xl mx-auto px-4">
           <div className="flex space-x-1 py-2">
             {tabs.map((tab) => {
@@ -39,7 +39,7 @@ function App() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-lg text-sm font-medium transition-all duration-200 ${
                     activeTab === tab.id
-                      ? 'bg-primary text-white shadow-glow'
+                      ? 'bg-pixelAccent text-white shadow-glow'
                       : 'text-textMuted hover:text-text hover:bg-surfaceHover'
                   }`}
                 >
@@ -85,7 +85,7 @@ function App() {
                     return (
                       <button
                         onClick={openConnectModal}
-                        className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full font-medium shadow-glow transition-all duration-200 hover:scale-105"
+                        className="bg-pixelAccent hover:bg-pixelAccent/90 text-white px-6 py-3 rounded-full font-medium shadow-glow transition-all duration-200 hover:scale-105"
                       >
                         Connect Wallet
                       </button>
