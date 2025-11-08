@@ -20,6 +20,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import { PaymentProvider } from './hooks/usePaymentContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -30,7 +31,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     })}>
       <QueryClientProvider client={new QueryClient()}>
         <RainbowKitProvider>
-          <App />
+          <PaymentProvider>
+            <App />
+          </PaymentProvider>
         </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>

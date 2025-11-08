@@ -7,8 +7,16 @@ export const usePaymentContext = () => {
 };
 
 export const PaymentProvider = ({ children }) => {
+  const createSession = async () => {
+    // Mock payment session creation
+    console.log('Creating payment session for route protection...');
+    // Simulate payment
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    console.log('Payment session created successfully.');
+  };
+
   return (
-    <PaymentContext.Provider value={{}}>
+    <PaymentContext.Provider value={{ createSession }}>
       {children}
     </PaymentContext.Provider>
   );
